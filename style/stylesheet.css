@@ -1,0 +1,198 @@
+:root {
+    --main_blue: #0070C0 ;
+    --second_blue: #00B0F0;
+    --red: #FF0000;
+    --gray: #171616;
+    --black: #000000;
+    --white: #FFFFFF;
+    --second_white: #F6F6F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.landing h1 {
+    font-family: 'Krona One', sans-serif;
+}
+
+.landing-img {
+    background: url("../images/gradientlanding.png");
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.landing-content h1 {
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+
+.input-group-append i {
+    color: var(--main_blue);
+    transition: ease 0.4s;
+}
+
+.input-group-append i:hover {
+    color: var(--second_blue);
+}
+
+
+.img-credits a {
+    text-decoration: none;
+    color: var(--white);
+    border: solid 1px var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 13px;
+}
+
+.uneven-grid {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.profilepicture img {
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 1rem;
+    min-height: 296px;
+    border: none;
+    background-color: var(--second_white) !important;
+}
+
+.carousel img {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.signup {
+    background: var(--white);
+    min-height: 50vh;
+    width: 60%;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    padding: 4rem;
+}
+
+.login {
+    border-right: solid var(--white) 1px;
+}
+
+.login-form input {
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    border: none;
+    width: 85%;
+    margin-bottom: 1rem;
+}
+
+.button {
+    background: var(--main_blue);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease 0.4s;
+}
+
+.button:hover {
+    background-color: var(--second_blue);
+    color: var(--gray);
+    font-weight: bold;
+}
+
+.join {
+    padding-left: 3.5rem;
+}
+
+.banner {
+    background: url("../images/gradient2.png");
+    width: 100%;
+    height: 15vh;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.banner-name {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 20%;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Krona One', sans-serif;
+}
+
+.banner-profileimg img{
+    width: 10rem;
+    padding: 0;
+    margin-top: 6rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    border: var(--red) 3px solid;
+}
+
+.account-content {
+    background-color: var(--second_white);
+    padding: 5rem 2rem 2rem 2rem ;
+    border-radius: 0px 0px 5px 5px;
+    min-height: 187px;
+    margin-bottom: 1rem;
+}
+
+.account-info {
+    padding: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .profilepicture img {
+        display: none;
+    }
+
+    .banner {
+        align-items: center;
+    }
+
+    .banner-profileimg img {
+      display: none;
+    }
+  }
+
+.footer {
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 5rem;
+}
