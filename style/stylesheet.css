@@ -171,7 +171,7 @@ body {
     margin-top: 6rem;
     margin-left: 2rem;
     border-radius: 50%;
-    border: var(--red) 3px solid;
+    border: var(--main_blue) 3px solid;
 }
 
 .account-content {
