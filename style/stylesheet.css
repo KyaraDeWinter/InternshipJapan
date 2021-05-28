@@ -30,7 +30,7 @@ body {
 .landing-img {
     background: url("../images/gradientlanding.png");
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -55,6 +55,10 @@ body {
 .landing-content h1 {
     font-size: 50px;
     margin-bottom: 2rem;
+}
+
+.input-group input {
+    margin-left: 1rem;
 }
 
 .input-group-append i {
