@@ -1,5 +1,5 @@
 <?php
-require_once('header.php');
+require_once('<template/header.php');
 ?>
 
     <div class="landing">
@@ -101,7 +101,7 @@ require_once('header.php');
   </div>
 
     <?php
-    require_once('footer.php');
+    require_once('template/footer.php');
     ?>
 
   </body>
