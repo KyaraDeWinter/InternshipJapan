@@ -1,5 +1,6 @@
 <?php
-require_once('<template/header.php');
+require_once('db.php');
+require_once('template/header.php');
 ?>
 
     <div class="landing">
@@ -87,12 +88,12 @@ require_once('<template/header.php');
                 <div class="card">
                     <div class="card-body">
                         <div class="profilepicture">
-                            <a href="#"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
+                            <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
                         </div>
                         <h5>Full Name</h5>
                         <hr>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
-                        <a href="#" class="btn btn-primary button">View my Account</a>
+                        <a href="account.php" class="btn btn-primary button">View my Account</a>
                     </div>
                 </div>
             </div>

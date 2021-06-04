@@ -23,6 +23,26 @@ body {
     display: none;
 }
 
+/* HEADER */
+.navbar {
+    font-weight: bold;
+    color: var(--gray) !important;
+}
+
+.navbar-brand img {
+    height: 3rem;
+}
+
+.d-flex img {
+    height: 3.5rem;
+    transition: transform .2s;
+}
+
+.d-flex img:hover {
+    transform: scale(1.1);
+}
+
+/* LANDINGPAGE */
 .landing h1 {
     font-family: 'Krona One', sans-serif;
 }
@@ -57,6 +77,8 @@ body {
     margin-bottom: 2rem;
 }
 
+/* LANDINGPAGE SEARCHBAR */
+
 .input-group input {
     margin-left: 1rem;
 }
@@ -70,7 +92,7 @@ body {
     color: var(--second_blue);
 }
 
-
+/* CREDITS UNSPLASH PHOTOGRAPHER */
 .img-credits a {
     text-decoration: none;
     color: var(--white);
@@ -80,6 +102,7 @@ body {
     font-size: 13px;
 }
 
+/* HOME UNEVEN GRID */
 .uneven-grid {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -101,6 +124,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/* SIGNUP PAGE */
 .signup {
     background: var(--white);
     min-height: 50vh;
@@ -128,6 +152,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.join {
+    padding-left: 3.5rem;
+}
+
+/* STYLING FOR EVERY BUTTON */
 .button {
     background: var(--main_blue);
     border: none;
@@ -142,10 +171,7 @@ body {
     font-weight: bold;
 }
 
-.join {
-    padding-left: 3.5rem;
-}
-
+/* ACCOUNT PAGE */
 .banner {
     background: url("../images/gradient2.png");
     width: 100%;
@@ -200,6 +226,8 @@ body {
     }
   }
 
+
+/* FOOTER */
 .footer {
     background-color: var(--gray);
     color: var(--white);

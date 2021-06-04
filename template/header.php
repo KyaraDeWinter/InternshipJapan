@@ -37,10 +37,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Internships</a>
+              <a class="nav-link" href="internships.php">Internships</a>
             </li>
             <li class="nav-item">
              <a class="nav-link" href="#">Contact</a>
@@ -50,8 +50,7 @@
             </li>
         </ul>
         <form class="d-flex">
-            <img src="images/defaultprofilepicture.png" alt="profilepicture" style="height: 3rem;">
-            <button class="btn btn-outline-success" type="submit">My account</button>
+          <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
         </form>
         </div>
     </div>
