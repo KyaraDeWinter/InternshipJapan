@@ -1,3 +1,12 @@
+<?php
+/* $sql = "SELECT * FROM internshipjapan";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll();
+var_dump($result);
+*/
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,16 +46,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="index.php?page=home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="internships.php">Internships</a>
+              <a class="nav-link" href="index.php?page=internships">Internships</a>
             </li>
             <li class="nav-item">
-             <a class="nav-link" href="#">Contact</a>
+             <a class="nav-link" href="index.php?page=#">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="index.php?page=#">Link</a>
             </li>
         </ul>
         <form class="d-flex">
