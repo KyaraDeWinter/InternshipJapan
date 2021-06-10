@@ -35,15 +35,32 @@ require_once('template/header.php');
             </div>
           </div>
          </div>
+
+         <?php
+          $sql = "SELECT * FROM company";
+          $stmt = $conn->prepare($sql);
+          $stmt->execute();
+          $result = $stmt->fetchAll();
+            // var_dump($result);
+          ?>
+
+          <?php
+          foreach($result as $res) { 
+            // var_dump($res);
+          ?>
+
         <div class="col-12 col-lg-9">
           <div class="card company">
             <div class="card-body">
-              <h5 class="card-title">Name of company</h5>
-              <p class="card-text">Desciption of company - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero quas rem enim, aspernatur eveniet illum minus omnis sunt nam natus sint consequuntur fugit sapiente neque veritatis repellat in similique molestiae quis iure. Magni sint, qui ullam nesciunt ab corporis eaque?</p>
+              <h5 class="card-title"><?php echo $res['company_name'];?></h5>
+              <p class="card-text"><?php echo $res['profile_text'];?></p>
               <a href="#" class="btn btn-primary button"><i class="fas fa-angle-down" style="margin-right: 1rem;"></i>Read more</a>
             </div>
           </div>
         </div>
+
+        <?php } ?>
+
       </div>
     </div>
 
