@@ -18,6 +18,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+i {
+    margin-right: 1rem;
+}
+
 /* hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
@@ -27,6 +31,8 @@ body {
 .navbar {
     font-weight: bold;
     color: var(--gray) !important;
+    background-color: var(--white) !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar-brand img {
@@ -90,16 +96,6 @@ body {
 
 .input-group-append i:hover {
     color: var(--second_blue);
-}
-
-/* CREDITS UNSPLASH PHOTOGRAPHER */
-.img-credits a {
-    text-decoration: none;
-    color: var(--white);
-    border: solid 1px var(--white);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    font-size: 13px;
 }
 
 /* HOME UNEVEN GRID */
@@ -227,14 +223,32 @@ body {
   }
 
 /* INTERNSHIP LIST PAGE */
-
-
 .company {
-    border-radius: 10px 10px 10px 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20)
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    padding: 1rem;
 }
 
 .company-search {
-    border-radius: 10px 10px 10px 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.company-name {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.company-img {
+    border-left: 1px solid var(--gray);
+}
+
+.company-img img{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0 !important;
 }
 
 /* FOOTER */

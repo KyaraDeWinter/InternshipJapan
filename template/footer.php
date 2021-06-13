@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="row">
             <div class="col-12 col-md-4">
-                <h1>Lorem, ipsum dolor.</h1>huknv
+                <h1>Lorem, ipsum dolor.</h1>
                 <hr>
                 <p>Lorem ipsum dolor sit amet.</p>
                 <p>Lorem, ipsum dolor.</p>
@@ -19,8 +19,8 @@
                 <h1>Contact Us</h1>
                 <hr>
                 <p><a href="mailto:webmaster@example.com"><i class="fas fa-envelope" style="margin-right: 1rem;"></i>Email us</a></p>
-                <p><a href="https://www.linkedin.com/groups/4729663/" target="_blank"><i class="fab fa-linkedin" style="margin-right: 1rem;"></i>LinkedIn</a></p>
-                <p><a href="https://www.facebook.com/internshipjapan" target="_blank"><i class="fab fa-facebook-square" style="margin-right: 1rem;"></i>Facebook</a></p>
+                <p><a href="https://www.linkedin.com/groups/4729663/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a></p>
+                <p><a href="https://www.facebook.com/internshipjapan" target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></p>
             </div>
         </div>
     </div>

@@ -6,7 +6,7 @@ require_once('template/header.php');
 
     <div class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
       <div class="row">
-        <div class="col-12 col-lg-3">
+        <div class="col-3 col-lg-3">
           <div class="card company-search">
             <div class="card-body">
               <h5 class="card-title">Search for Internships</h5>
@@ -36,31 +36,54 @@ require_once('template/header.php');
           </div>
          </div>
 
-         <?php
-          $sql = "SELECT * FROM company";
-          $stmt = $conn->prepare($sql);
-          $stmt->execute();
-          $result = $stmt->fetchAll();
-            // var_dump($result);
-          ?>
+         <div class="company9 col-9">
+           <?php
+            $sql = "SELECT * FROM company";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+              // var_dump($result);
+            ?>
+  
+            <?php
+            foreach($result as $res) { 
+              // var_dump($res);
+            ?>
+  
+          <div class="col-12">
+            <div class="card company">
+              <div class="card-body row">
+                <div class="col-lg-9">
+                  <h5 class="company-name"><?php echo $res['company_name'];?> | <?php echo $res['position'];?></h5>
+                  <p class="card-text"><i class="fas fa-map-marker-alt"></i><?php echo $res['city'];?></p>
+                  <p class="card-text"><?php echo $res['profile_text'];?></p>
 
-          <?php
-          foreach($result as $res) { 
-            // var_dump($res);
-          ?>
+                  <p>
+                    <button class="btn btn-primary button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-angle-down"></i>Read More</button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                     <p class="card-text"><?php echo $res['position_text'];?></p>
 
-        <div class="col-12 col-lg-9">
-          <div class="card company">
-            <div class="card-body">
-              <h5 class="card-title"><?php echo $res['company_name'];?></h5>
-              <p class="card-text"><?php echo $res['profile_text'];?></p>
-              <a href="#" class="btn btn-primary button"><i class="fas fa-angle-down" style="margin-right: 1rem;"></i>Read more</a>
+                     <?php // echo substr($res['position_text'], 0, 100);?>
+
+                     <h5>Contact</h5>
+                     <p class="card-text">For more information about the company <?php echo $res['company_name'];?>, you can send an email with your question (don't forget to use your full name).</p>
+                     <p class="card-text">If you're interested in the internship vacancy, you can send your motivation letter and curriculum vitae to <?php echo $res['contact_name'];?> at the email: <?php echo $res['contact_email'];?></p>
+                    </div>
+                  </div>
+
+                </div>
+               <div class="col-lg-3 company-img">
+                 <img src="images/gradient4.png" alt="image">
+               </div>
+              </div>
             </div>
           </div>
-        </div>
+  
+          <?php } ?>
 
-        <?php } ?>
-
+         </div>
       </div>
     </div>
 
