@@ -11,5 +11,5 @@ if(isset($_GET['page']) && !empty($_GET['page'])){ // when page is empty then..
  else { // when page is correct, show home page
     include_once('home.php');
 }
-include_once('template/footer.php')
+include_once('template/footer.php');
 ?>

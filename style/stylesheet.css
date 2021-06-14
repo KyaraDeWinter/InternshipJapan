@@ -6,6 +6,7 @@
     --black: #000000;
     --white: #FFFFFF;
     --second_white: #F6F6F6;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
 }
 
 * {
@@ -32,7 +33,7 @@ i {
     font-weight: bold;
     color: var(--gray) !important;
     background-color: var(--white) !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--box_shadow);
 }
 
 .navbar-brand img {
@@ -46,6 +47,11 @@ i {
 
 .d-flex img:hover {
     transform: scale(1.1);
+}
+
+.dropdown-toggle {
+    background-color: var(--white) !important;
+    border: none;
 }
 
 /* LANDINGPAGE */
@@ -75,7 +81,7 @@ i {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 2.7),rgba(255, 255, 255, 0.3));
     padding: 3rem;
     border-radius: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: var(--box_shadow);
 }
 
 .landing-content h1 {
@@ -130,7 +136,7 @@ i {
     padding: 4rem;
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 12.5px );
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    box-shadow: var(--box_shadow);
 }
 
 .login {
@@ -168,11 +174,18 @@ i {
 }
 
 /* ACCOUNT PAGE */
+.account-detail {
+    box-shadow: var(--box_shadow);
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
 .banner {
     background: url("../images/gradient2.png");
     width: 100%;
     height: 15vh;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     position: relative;
     display: flex;
     align-items: center;
@@ -181,31 +194,37 @@ i {
 .banner-name {
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-left: 20%;
     margin-top: 0.5rem;
     font-weight: bold;
     font-family: 'Krona One', sans-serif;
 }
 
 .banner-profileimg img{
-    width: 10rem;
-    padding: 0;
-    margin-top: 6rem;
-    margin-left: 2rem;
+    width: 20%;
+    padding-left: 3rem;
     border-radius: 50%;
-    border: var(--main_blue) 3px solid;
 }
 
 .account-content {
     background-color: var(--second_white);
-    padding: 5rem 2rem 2rem 2rem ;
-    border-radius: 0px 0px 5px 5px;
+    padding: 3rem ;
+    border-radius: 0px 0px 10px 10px;
     min-height: 187px;
-    margin-bottom: 1rem;
 }
 
 .account-info {
     padding: 2rem;
+}
+
+.edit {
+    float: right;
+    text-decoration: none;
+    color: var(--gray);
+    transition: transform .2s;
+}
+
+.edit:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 992px) {
@@ -225,13 +244,13 @@ i {
 /* INTERNSHIP LIST PAGE */
 .company {
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: var(--box_shadow);
     padding: 1rem;
 }
 
 .company-search {
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    box-shadow: var(--box_shadow);
     text-align: center;
     padding: 0.5rem;
 }
@@ -249,6 +268,13 @@ i {
     width: 100%;
     border-radius: 10px 10px 10px 10px;
     padding: 0 !important;
+}
+
+/* CONTACT */
+.contact {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 2.7),rgba(0, 112, 192, 0.3));
 }
 
 /* FOOTER */
@@ -272,8 +298,6 @@ i {
 /* ERROR PAGE */
 .error-page {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 2.7),rgba(0, 112, 192, 0.3));
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 12.5px );
     width: 100vw;
     height: 70vh;
 }

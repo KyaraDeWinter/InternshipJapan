@@ -37,7 +37,8 @@ require_once('template/header.php');
          </div>
 
          <div class="company9 col-9">
-           <?php
+         
+            <?php
             $sql = "SELECT * FROM company";
             $stmt = $conn->prepare($sql);
             $stmt->execute();

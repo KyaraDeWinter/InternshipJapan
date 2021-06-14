@@ -47,7 +47,19 @@
             </li>
         </ul>
         <form class="d-flex">
-          <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
+              
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="images/defaultprofilepicture.png" alt="profilepicture">
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.php?page=signup">Signin</a></li>
+                  <li><a class="dropdown-item" href="index.php?page=account">My Account</a></li>
+                  <li><a class="dropdown-item" href="index.php?page=#">My Favorites</a></li>
+                </ul>
+              </div>
+
         </form>
         </div>
     </div>
