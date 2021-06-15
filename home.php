@@ -31,12 +31,26 @@ require_once('template/header.php');
         <div class="col-12 col-md-10">
             <div class="row">
                 <div class="col-12 col-md-6">
+
+                <?php
+                $sql = "SELECT * FROM company";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $result = $stmt->fetchAll();
+                // var_dump($result);
+                ?>
+    
+                <?php
+                foreach($result as $res) { 
+                // var_dump($res);
+                ?>
+
                     <div id="carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                             <img class="d-block w-100" src="images/gradient1.png" alt="First slide">
                                 <div class="carousel-caption">
-                                    <h5>Company Name</h5>
+                                    <h5><?php echo $res['company_name'];?></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat exercitationem quo deserunt? Voluptatem ipsam, quis distinctio laudantium labore deleniti expedita.</p>
                                 </div>
                             </div>
@@ -57,6 +71,8 @@ require_once('template/header.php');
                         </a>
                         </div>
                     </div>
+
+                    <?php } ?>
                 
                 <div class="col-12 col-md-6">
                     <div class="card">

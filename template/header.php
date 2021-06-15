@@ -46,21 +46,18 @@
              <a class="nav-link" href="index.php?page=contact">Contact</a>
             </li>
         </ul>
-        <form class="d-flex">
-              
-              <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="images/defaultprofilepicture.png" alt="profilepicture">
-                </a>
 
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="index.php?page=signup">Signin</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=account">My Account</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=#">My Favorites</a></li>
-                </ul>
-              </div>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/defaultprofilepicture.png" alt="profilepicture">
+              </a>
 
-        </form>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.php?page=signup">Signin</a></li>
+                <li><a class="dropdown-item" href="index.php?page=account">My Account</a></li>
+                <li><a class="dropdown-item" href="index.php?page=#">My Favorites</a></li>
+              </ul>
+            </div>
         </div>
     </div>
     </nav>

@@ -37,6 +37,8 @@ require_once('template/header.php');
          </div>
 
          <div class="company9 col-9">
+
+         <a class="btn btn-primary button" href="index.php?php=internship-create" style="margin-bottom: 1rem; width: 100%;">Add a new internship</a>
          
             <?php
             $sql = "SELECT * FROM company";
@@ -59,12 +61,6 @@ require_once('template/header.php');
                   <p class="card-text"><i class="fas fa-map-marker-alt"></i><?php echo $res['city'];?></p>
                   <p class="card-text"><?php echo $res['profile_text'];?></p>
 
-                  <p>
-                    <button class="btn btn-primary button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-angle-down"></i>Read More</button>
-                  </p>
-                  
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
                      <p class="card-text"><?php echo $res['position_text'];?></p>
 
                      <?php // echo substr($res['position_text'], 0, 100);?>
@@ -73,11 +69,13 @@ require_once('template/header.php');
                      <p class="card-text">For more information about the company <?php echo $res['company_name'];?>, you can send an email with your question (don't forget to use your full name).</p>
                      <p class="card-text">If you're interested in the internship vacancy, you can send your motivation letter and curriculum vitae to <?php echo $res['contact_name'];?> at the email: <?php echo $res['contact_email'];?></p>
                     </div>
-                  </div>
 
-                </div>
                <div class="col-lg-3 company-img">
                  <img src="images/gradient4.png" alt="image">
+                 <div class="row" style="margin: auto;">
+                    <a class="btn btn-primary button" href="index.php?php=internship-update&id=" style="margin-top: 1rem;">Update</a>
+                    <a class="btn btn-primary button" href="index.php?php=internship-delete&id=" style="margin-top: 1rem;">Delete</a>
+                 </div>
                </div>
               </div>
             </div>
