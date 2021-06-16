@@ -30,6 +30,9 @@ if(isset($_POST['submit'])){
     if($_POST['position'] == '') {
         $error['position'] = 'Position is required.';
     }
+    if($_POST['position_text'] == '') {
+        $error['position_text'] = 'Position text is required.';
+    }
     if($_POST['contact_name'] == '') {
         $error['contact_name'] = 'Name of contact person is required.';
     }
@@ -41,8 +44,8 @@ if(isset($_POST['submit'])){
     }
     //var_dump($error);
 
-    if(count($_error) == 0) {
-        $sql = "INSERT INTO company (company_name, street_adress, postal_code, city, country_id, profile_text, position, contact_name, contact_email, website) VALUES ()";
+    if(count($error) == 0) {
+        $sql = "INSERT INTO company (company_name, street_adress, postal_code, city, country_id, profile_text, position, position_text, contact_name, contact_email, website) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->execute([
             $_POST['company_name'],
@@ -52,10 +55,12 @@ if(isset($_POST['submit'])){
             $_POST['country_id'],
             $_POST['profile_text'],
             $_POST['position'],
+            $_POST['position_text'],
             $_POST['contact_name'],
             $_POST['contact_email'],
-            $_POST['website'],
+            $_POST['website']
         ]);
+        header('location: index.php?page=admin');
     }
 }
 ?>
@@ -75,7 +80,7 @@ if(isset($_POST['submit'])){
     </div>
     <div class="form-group">
         <label for="input_streetadress">Street adress</label>
-        <input value="<?php echo (isset($_POST['comstreet_adresspany_name']) ? $_POST['street_adress'] : '' );?>" type="text" name="street_adress" class="form-control" id="input_streetadress" placeholder="Enter the street adress..">
+        <input value="<?php echo (isset($_POST['street_adress']) ? $_POST['street_adress'] : '' );?>" type="text" name="street_adress" class="form-control" id="input_streetadress" placeholder="Enter the street adress..">
         <?php echo (isset($error['street_adress']) ? $error['street_adress'] : '');?>
     </div>
     <div class="form-group">
@@ -95,13 +100,18 @@ if(isset($_POST['submit'])){
     </div>
     <div class="form-group">
         <label for="input_profiletext">Profile text</label>
-        <textarea value="<?php echo (isset($_POST['profile_text']) ? $_POST['profile_text'] : '' );?>" class="form-control" name="profile-text" id="input_profiletext" placeholder="Enter the profile text.." cols="30" rows="5"></textarea>
+        <textarea value="<?php echo (isset($_POST['profile_text']) ? $_POST['profile_text'] : '' );?>" class="form-control" name="profile_text" id="input_profiletext" placeholder="Enter the profile text.." cols="30" rows="5"></textarea>
         <?php echo (isset($error['profile_text']) ? $error['profile_text'] : '');?>
     </div>
     <div class="form-group">
         <label for="input_position">Position</label>
         <input value="<?php echo (isset($_POST['position']) ? $_POST['position'] : '' );?>" type="text" name="position" class="form-control" id="input_position" placeholder="Enter the position..">
         <?php echo (isset($error['position']) ? $error['position'] : '');?>
+    </div>
+    <div class="form-group">
+        <label for="input_positiontext">Position text</label>
+        <textarea value="<?php echo (isset($_POST['position_text']) ? $_POST['position_text'] : '' );?>" class="form-control" name="position_text" id="input_profiletext" placeholder="Enter the position text.." cols="30" rows="5"></textarea>
+        <?php echo (isset($error['profilposition_texte_text']) ? $error['position_text'] : '');?>
     </div>
     <div class="form-group">
         <label for="input_contactname">Contact name</label>
@@ -118,7 +128,7 @@ if(isset($_POST['submit'])){
         <input value="<?php echo (isset($_POST['website']) ? $_POST['website'] : '' );?>" type="text" name="website" class="form-control" id="input_website" placeholder="Enter the link of the website..">
         <?php echo (isset($error['website']) ? $error['website'] : '');?>
     </div>
-    <button type="submit" class="btn btn-primary button">Submit</button>
+    <button type="submit" name='submit' class="btn btn-primary button">Submit</button>
     </form>
 </div>
 
