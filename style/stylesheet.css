@@ -338,3 +338,21 @@ i {
   #myBtn:hover {
     transform: scale(1.1);
   }
+
+  .create-title {
+      text-align: center;
+      margin-top: 4rem;
+  }
+
+  .create {
+    width: 70%;
+    margin: 3rem 3rem;
+  }
+
+  .create form {
+      width: 100%;
+  }
+
+  .create .form-group {
+    margin-bottom: 1rem;
+  }

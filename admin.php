@@ -38,7 +38,7 @@ require_once('template/header.php');
 
          <div class="company9 col-9">
 
-         <a class="btn btn-primary button" href="index.php?php=internship-create" style="margin-bottom: 1rem; width: 100%;">Add a new internship</a>
+         <a class="btn btn-primary button" href="index.php?page=internship-create" style="margin-bottom: 1rem; width: 100%;">Add a new internship</a>
          
             <?php
             $sql = "SELECT * FROM company";
@@ -73,8 +73,8 @@ require_once('template/header.php');
                <div class="col-lg-3 company-img">
                  <img src="images/gradient4.png" alt="image">
                  <div class="row" style="margin: auto;">
-                    <a class="btn btn-primary button" href="index.php?php=internship-update&id=" style="margin-top: 1rem;">Update</a>
-                    <a class="btn btn-primary button" href="index.php?php=internship-delete&id=" style="margin-top: 1rem;">Delete</a>
+                    <a class="btn btn-primary button" href="index.php?page=internship-update&id=" style="margin-top: 1rem;">Update</a>
+                    <a class="btn btn-primary button" href="index.php?page=internship-delete&id=" style="margin-top: 1rem;">Delete</a>
                  </div>
                </div>
               </div>
