@@ -1,0 +1,40 @@
+/* FOOTER */
+.footer {
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 5rem;
+}
+
+.footer h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* SCROLL TO TOP BUTTON */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--main_blue); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    font-size: 20px; /* Increase font size */
+    width: 3rem;
+    height: 3rem;
+    transition: transform .2s;
+  }
+  
+  #myBtn:hover {
+    transform: scale(1.1);
+  }

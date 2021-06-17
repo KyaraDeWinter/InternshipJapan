@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="../style/header.css">
 
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/5b23f4b030.js" crossorigin="anonymous"></script>
@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="images/internship_japan_logo.png" alt="internshipjapanlogo">
+          <img src="../images/internship_japan_logo.png" alt="internshipjapanlogo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
 
         <div class="accountpicture">
             <a href="index.php?page=account&id=">
-             <img src="images/defaultprofilepicture.png" alt="profilepicture">
+             <img src="../images/defaultprofilepicture.png" alt="profilepicture">
             </a>
         </div>
 

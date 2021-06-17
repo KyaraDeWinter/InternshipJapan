@@ -1,0 +1,18 @@
+/* ERROR PAGE */
+.error-page {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 2.7),rgba(0, 112, 192, 0.3));
+    width: 100vw;
+    height: 70vh;
+}
+
+.error {
+    margin: 0rem 16rem 16rem 16rem;
+    padding-top: 13%;
+    text-align: center;
+}
+
+.error form {
+    width:60%;
+    margin: auto;
+    padding-top: 2rem;
+}

@@ -1,0 +1,59 @@
+:root {
+    --main_blue: #0070C0 ;
+    --second_blue: #00B0F0;
+    --red: #FF0000;
+    --gray: #171616;
+    --black: #000000;
+    --white: #FFFFFF;
+    --second_white: #F6F6F6;
+    --box_shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+}
+
+i {
+    margin-right: 1rem;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* HEADER */
+.navbar {
+    font-weight: bold;
+    color: var(--gray) !important;
+    background-color: var(--white) !important;
+    box-shadow: var(--box_shadow);
+}
+
+.navbar-brand img {
+    height: 3rem;
+}
+
+.accountpicture img {
+    height: 3.5rem;
+    transition: transform .2s;
+}
+
+.accountpicture img:hover {
+    transform: scale(1.1);
+}
+
+/* STYLING FOR EVERY BUTTON */
+.button {
+    background: var(--main_blue);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease 0.4s;
+}

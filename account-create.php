@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     //     $error['username'] = 'Username is required.';
     // }
     if($_POST['username'] == '') {
-        $error['username'] = 'Username is required.';
+        $error['username'] = '<span style="color: red;">Username is required.</span>';
     }
     if($_POST['password'] == '') {
         $error['password'] = 'Password is required.';

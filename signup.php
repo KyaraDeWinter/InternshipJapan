@@ -39,21 +39,25 @@ if(isset($_POST['submit'])) {
            <div class="signup">
             <div class="row">
                 <div class="col-12 col-sm-4 login">
-                    <h1>Login</h1>
+                    <h1>Signin</h1>
                     <div class="login-form">
                          <form action="" method="post">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" name="username" placeholder="Enter your username..">
                                 <?php if(isset($error_name)){ ?>
-                                <p><?php echo $error_name ?></p>
+                                <p><?php foreach($error_name as $value){
+                                    echo $value, '<br>';
+                                } ?></p>
                                 <?php } ?>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="Enter your password..">
                                 <?php if(isset($error_password)){ ?>
-                                <p><?php echo $error_password ?></p>
+                                <p><?php foreach($error_password as $value){
+                                echo $value, '<br>';
+                                } ?></p>
                                 <?php } ?>
                             </div>
                             <input value="submit" name="submit" type="submit" class="btn btn-primary button">Login</input>
