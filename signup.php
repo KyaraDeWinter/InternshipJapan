@@ -1,5 +1,27 @@
 <?php
+session_start();
 require_once('template/header.php');
+require_once('db.php');
+
+if(isset($_POST['submit'])) {
+    if(empty($_POST['username'])) {
+        $error_name['username'] = '<span style="color: red;">Username is required.</span>';
+    }
+    if(empty($_POST['password'])) {
+        $error_password['password'] = '<span style="color: red;">Password is required.</span>';
+    } else {
+    $username = strip_tags(trim($_POST['username']));
+    $password = strip_tags(trim($_POST['password']));
+    $query = $conn->prepare("SELECT * FROM user WHERE username = ? AND password = ?");
+    $query->execute(array($username, $password));
+    $control = $query->fetch(PDO::FETCH_OBJ);
+    if($control>0) {
+      $_SESSION['username']=$username;
+      header('location: index.php?page=account');
+    }
+    echo "<center><h1>Username and/or password is incorrect!</h1></center>";
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,23 +41,29 @@ require_once('template/header.php');
                 <div class="col-12 col-sm-4 login">
                     <h1>Login</h1>
                     <div class="login-form">
-                        <form>
+                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="input_email">Email address</label>
-                                <input type="email" class="form-control" id="input_email" placeholder="Enter email">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" name="username" placeholder="Enter your username..">
+                                <?php if(isset($error_name)){ ?>
+                                <p><?php echo $error_name ?></p>
+                                <?php } ?>
                             </div>
                             <div class="form-group">
-                                <label for="input_password">Password</label>
-                                <input type="password" class="form-control" id="input_password" placeholder="Password">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="Enter your password..">
+                                <?php if(isset($error_password)){ ?>
+                                <p><?php echo $error_password ?></p>
+                                <?php } ?>
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <input value="submit" name="submit" type="submit" class="btn btn-primary button">Login</input>
                         </form>
                     </div>
                 </div>
                 <div class="col-12 col-sm-8 join">
                     <h1>Join the Community</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, qui! Ratione, possimus officia cumque, pariatur repellat minima voluptatum sequi vero a accusantium odit hic dicta fugit, natus voluptatem consequatur maiores.</p>
-                      <a href="index.php?page=account-create"><button type="button" class="btn btn-primary">Create Your Account</button></a>
+                      <a href="index.php?page=account-create"><button type="button" class="btn btn-primary button">Create Your Account</button></a>
                 </div>
             </div>
            </div>
