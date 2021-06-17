@@ -1,5 +1,5 @@
 <?php
-require_once('template/header.php');
+require_once('../template/header.php');
 ?>
 
 <body>
@@ -7,7 +7,7 @@ require_once('template/header.php');
           <div class="landing-img">
              <div class="signup">
               <div class="row">
-                  <div class="col-12 col-sm-4 login">
+                  <div class="col-12 login">
                       <h1>Login</h1>
                       <div class="login-form">
                           <form>
@@ -23,18 +23,13 @@ require_once('template/header.php');
                           </form>
                       </div>
                   </div>
-                  <div class="col-12 col-sm-8 join">
-                      <h1>Join the Community</h1>
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, qui! Ratione, possimus officia cumque, pariatur repellat minima voluptatum sequi vero a accusantium odit hic dicta fugit, natus voluptatem consequatur maiores.</p>
-                        <a href="index.php?page=account-create"><button type="button" class="btn btn-primary">Create Your Account</button></a>
-                  </div>
               </div>
              </div>
           </div>
       </div>
 
          <?php
-        require_once('template/footer.php');
+        require_once('../template/footer.php');
         ?>
 
   </body>

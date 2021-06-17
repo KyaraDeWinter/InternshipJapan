@@ -1,5 +1,5 @@
 <?php 
-require_once('template/header.php');
+require_once('../template/header.php');
 ?>
 
 <?php 
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 
 <html>
     <div class="container create-title">
-        <h1>Create a new internship</h1>
+        <h1>Add a new company</h1>
         <hr>
     </div>
 
@@ -76,7 +76,7 @@ if(isset($_POST['submit'])){
     <div class="form-group">
         <label for="input_companyname">Company name</label>
         <input value="<?php echo (isset($_POST['company_name']) ? $_POST['company_name'] : '' );?>" type="text" name="company_name" class="form-control" id="input_companyname" placeholder="Enter the name of the company..">
-        <?php echo (isset($error['companyname']) ? $error['companyname'] : '');?>
+        <?php echo (isset($error['company_name']) ? $error['company_name'] : '');?>
     </div>
     <div class="form-group">
         <label for="input_streetadress">Street adress</label>
@@ -128,6 +128,8 @@ if(isset($_POST['submit'])){
         <input value="<?php echo (isset($_POST['website']) ? $_POST['website'] : '' );?>" type="text" name="website" class="form-control" id="input_website" placeholder="Enter the link of the website..">
         <?php echo (isset($error['website']) ? $error['website'] : '');?>
     </div>
+
+
     <button type="submit" name='submit' class="btn btn-primary button">Submit</button>
     </form>
 </div>
@@ -135,5 +137,5 @@ if(isset($_POST['submit'])){
 </html>
 
 <?php 
-require_once('template/footer.php');
+require_once('../template/footer.php');
 ?>

@@ -40,18 +40,13 @@ i {
     height: 3rem;
 }
 
-.dropdown img {
+.accountpicture img {
     height: 3.5rem;
     transition: transform .2s;
 }
 
-.dropdown img:hover {
+.accountpicture img:hover {
     transform: scale(1.1);
-}
-
-.dropdown-toggle {
-    background-color: var(--white) !important;
-    border: none;
 }
 
 /* LANDINGPAGE */

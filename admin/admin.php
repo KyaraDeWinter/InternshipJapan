@@ -1,5 +1,5 @@
 <?php
-require_once('template/header.php');
+require_once('../template/adminheader.php');
 ?>
 
   <body>
@@ -38,7 +38,7 @@ require_once('template/header.php');
 
          <div class="company9 col-9">
 
-         <a class="btn btn-primary button" href="index.php?page=internship-create" style="margin-bottom: 1rem; width: 100%;">Add a new internship</a>
+         <a class="btn btn-primary button" href="index.php?page=internship-create" style="margin-bottom: 1rem; width: 100%;">Add a new company</a>
          
             <?php
             $sql = "SELECT * FROM company";
@@ -58,25 +58,26 @@ require_once('template/header.php');
               <div class="card-body row">
                 <div class="col-lg-9">
                   <h5 class="company-name"><?php echo $res['company_name'];?> | <?php echo $res['position'];?></h5>
-                  <p class="card-text"><i class="fas fa-map-marker-alt"></i><?php echo $res['city'];?></p>
-                  <p class="card-text"><?php echo $res['profile_text'];?></p>
-
-                     <p class="card-text"><?php echo $res['position_text'];?></p>
-
-                     <?php // echo substr($res['position_text'], 0, 100);?>
-
-                     <h5>Contact</h5>
-                     <p class="card-text">For more information about the company <?php echo $res['company_name'];?>, you can send an email with your question (don't forget to use your full name).</p>
-                     <p class="card-text">If you're interested in the internship vacancy, you can send your motivation letter and curriculum vitae to <?php echo $res['contact_name'];?> at the email: <?php echo $res['contact_email'];?></p>
-                    </div>
+                  <p class="card-text"><b>City: </b><?php echo $res['city'];?></p>
+                  <p class="card-text"><b>Country ID: </b><?php echo $res['country_id'];?></p>
+                  <p class="card-text"><b>Profile text: </b><?php echo $res['profile_text'];?></p>
+                  <p class="card-text"><b>Profile text: </b><?php echo $res['position_text'];?></p>
+                  <?php // echo substr($res['position_text'], 0, 100);?>
+                  <p class="card-text"><b>Video link: </b>https://www.youtube.com/embed/<?php echo $res['video'];?></p>
+                  <p class="card-text"><b>Logo: </b><?php echo $res['logo'];?></p>
+                  <p class="card-text"><b>Contact name: </b><?php echo $res['contact_name'];?></p>
+                  <p class="card-text"><b>Contact email: </b><?php echo $res['contact_email'];?></p>
+                  <p class="card-text"><b>Website link: </b><?php echo $res['website'];?></p>
+                </div>
 
                <div class="col-lg-3 company-img">
                  <img src="images/gradient4.png" alt="image">
                  <div class="row" style="margin: auto;">
-                    <a class="btn btn-primary button" href="index.php?page=internship-update&id=" style="margin-top: 1rem;">Update</a>
-                    <a class="btn btn-primary button" href="index.php?page=internship-delete&id=" style="margin-top: 1rem;">Delete</a>
+                    <a class="btn btn-primary button" href="index.php?page=internship-update&id=<?php echo $res['company_id'];?>" style="margin-top: 1rem;">Update</a>
+                    <a class="btn btn-primary button" href="index.php?page=internship-delete&id=<?php echo $res['company_id'];?>" style="margin-top: 1rem;">Delete</a>
                  </div>
                </div>
+               
               </div>
             </div>
           </div>
@@ -88,7 +89,7 @@ require_once('template/header.php');
     </div>
 
     <?php
-    require_once('template/footer.php');
+    require_once('../template/footer.php');
     ?>
 
   </body>

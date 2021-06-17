@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <title>Internship Japan</title>
+    <title>Internship Japan | ADMIN</title>
   </head>
 
   <header>
@@ -37,16 +37,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.php?page=home">Home</a>
+              <a class="nav-link" href="index.php?page=admin">Companies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.php?page=internships">Internships</a>
+              <a class="nav-link" href="index.php?page=admin">Partners</a>
             </li>
             <li class="nav-item">
-             <a class="nav-link" href="index.php?page=contact">Contact</a>
-            </li>
-            <li class="nav-item">
-             <a class="nav-link" href="../admin/signin.php">Admin</a>
+             <a class="nav-link" href="index.php?page=admin">Interns</a>
             </li>
         </ul>
 
