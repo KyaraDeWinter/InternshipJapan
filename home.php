@@ -3,6 +3,17 @@ require_once('db.php');
 require_once('template/header.php');
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../internship/style/home.css">
+    <title>Internship Japan</title>
+</head>
+
+<header>
     <div class="landing">
         <div class="landing-img">
             <div class="landing-content">
@@ -22,105 +33,104 @@ require_once('template/header.php');
             </div>
         </div>
     </div>
+</header>
 
-  <body>
-
-
-  <div class="container uneven-grid">
-    <div class="row">
-        <div class="col-12 col-md-10">
-            <div class="row">
-                <div class="col-12 col-md-6">
-
-                <?php
-                $sql = "SELECT * FROM company";
-                $stmt = $conn->prepare($sql);
-                $stmt->execute();
-                $result = $stmt->fetchAll();
-                // var_dump($result);
-                ?>
+<body>
+    <div class="container uneven-grid">
+        <div class="row">
+            <div class="col-12 col-md-10">
+                <div class="row">
+                    <div class="col-12 col-md-6">
     
-                <?php
-                foreach($result as $res) { 
-                // var_dump($res);
-                ?>
-
-                    <div id="carousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/gradient1.png" alt="First slide">
-                                <div class="carousel-caption">
-                                    <h5><?php echo $res['company_name'];?></h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat exercitationem quo deserunt? Voluptatem ipsam, quis distinctio laudantium labore deleniti expedita.</p>
+                    <?php
+                    $sql = "SELECT * FROM company";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll();
+                    // var_dump($result);
+                    ?>
+        
+                    <?php
+                    foreach($result as $res) { 
+                    // var_dump($res);
+                    ?>
+    
+                        <div id="carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/gradient1.png" alt="First slide">
+                                    <div class="carousel-caption">
+                                        <h5><?php echo $res['company_name'];?></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat exercitationem quo deserunt? Voluptatem ipsam, quis distinctio laudantium labore deleniti expedita.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="images/gradient2.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                <img class="d-block w-100" src="images/gradient3.png" alt="Third slide">
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                            <img class="d-block w-100" src="images/gradient2.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                            <img class="d-block w-100" src="images/gradient3.png" alt="Third slide">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        </div>
-                    </div>
-
-                    <?php } ?>
-                
-                <div class="col-12 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">2 Lorem, ipsum dolor.</h5>
-                            <hr>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
-                            <a href="#" class="btn btn-primary button">button</a>
+    
+                        <?php } ?>
+                    
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">2 Lorem, ipsum dolor.</h5>
+                                <hr>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                                <a href="#" class="btn btn-primary button">button</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">3 Lorem, ipsum dolor.</h5>
-                            <hr>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
-                            <a href="#" class="btn btn-primary button">button</a>
+    
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">3 Lorem, ipsum dolor.</h5>
+                                <hr>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                                <a href="#" class="btn btn-primary button">button</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            
             </div>
-        
-        </div>
-        <div class="col-12 col-md-2">
-            <div class="row">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="profilepicture">
-                            <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
+            <div class="col-12 col-md-2">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="profilepicture">
+                                <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
+                            </div>
+                            <h5>Full Name</h5>
+                            <hr>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                            <a href="account.php" class="btn btn-primary button">View my Account</a>
                         </div>
-                        <h5>Full Name</h5>
-                        <hr>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
-                        <a href="account.php" class="btn btn-primary button">View my Account</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </div>
+      </div>
+    </body>
 
     <?php
     require_once('template/footer.php');
     ?>
 
-  </body>
 </html>

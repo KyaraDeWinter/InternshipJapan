@@ -1,0 +1,71 @@
+/* LANDINGPAGE */
+.landing h1 {
+    font-family: 'Krona One', sans-serif;
+}
+
+.landing-img {
+    background: url("../images/gradientlanding.png");
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 2.7),rgba(255, 255, 255, 0.3));
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: var(--box_shadow);
+}
+
+.landing-content h1 {
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+
+/* SEARCHBAR */
+
+.input-group input {
+    margin-left: 1rem;
+}
+
+.input-group-append i {
+    color: var(--main_blue);
+    transition: ease 0.4s;
+}
+
+.input-group-append i:hover {
+    color: var(--second_blue);
+}
+
+/* UNEVEN GRID */
+.uneven-grid {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.profilepicture img {
+    width: 100%;
+}
+
+.card {
+    margin-bottom: 1rem;
+    min-height: 296px;
+    border: none;
+    background-color: var(--second_white) !important;
+}
+
+.carousel img {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}

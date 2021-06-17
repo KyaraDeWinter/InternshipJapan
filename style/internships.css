@@ -1,0 +1,30 @@
+/* INTERNSHIP LIST PAGE */
+.company {
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: var(--box_shadow);
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+}
+
+.company-search {
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: var(--box_shadow);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.company-name {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.company-img {
+    border-left: 1px solid var(--gray);
+}
+
+.company-img img{
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0 !important;
+}

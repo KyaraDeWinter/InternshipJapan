@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="style/header.css">
 
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/5b23f4b030.js" crossorigin="anonymous"></script>
@@ -46,7 +46,10 @@
              <a class="nav-link" href="index.php?page=contact">Contact</a>
             </li>
             <li class="nav-item">
-             <a class="nav-link" href="../admin/signin.php">Admin</a>
+             <a class="nav-link" href="../internship/admin/signin.php">Admin</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" href="index.php?page=signup">Signup</a>
             </li>
         </ul>
 

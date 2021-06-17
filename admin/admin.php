@@ -1,5 +1,5 @@
 <?php
-require_once('../template/adminheader.php');
+require_once('../template/header.php');
 ?>
 
   <body>
