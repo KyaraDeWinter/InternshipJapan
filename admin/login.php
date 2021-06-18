@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
                                   } ?></p>
                                 <?php } ?>
                               </div>
-                              <input value="submit" name="submit" type="submit" class="btn btn-primary button">Login</input>
+                              <input value="submit" name="submit" type="submit" class="btn btn-primary button" style="background-color: var(--main_blue);"></input>
                           </form>
                       </div>
                   </div>

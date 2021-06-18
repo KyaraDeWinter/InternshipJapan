@@ -10,7 +10,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){ // when page is empty then..
     } 
 }
  else { // when page is correct, show home page
-    require_once('home.php');
+    require_once('admin.php');
 }
 require_once('template/footer.php');
 ?>

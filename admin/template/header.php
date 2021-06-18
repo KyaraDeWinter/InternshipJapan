@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="../images/internship_japan_logo.png" alt="internshipjapanlogo">
+          <img src="../../../internship/images/internship_japan_logo.png" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,8 +60,8 @@
         </ul>
 
         <div class="accountpicture">
-            <a href="index.php?page=account&id=">
-             <img src="../images/defaultprofilepicture.png" alt="profilepicture">
+            <a href="./../../internship/account.php">
+             <img src="../../../internship/images/defaultprofilepicture.png" alt="profilepicture">
             </a>
         </div>
 
