@@ -21,14 +21,24 @@ if(isset($_POST['submit'])){
     //var_dump($error);
 
     if(count($error) == 0) {
-        $sql = "INSERT INTO user (username, password, role) VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([
-            $_POST['username'],
-            $_POST['password'],
-            $_POST['role']
-        ]);
-        header('location: index.php?page=signup');
+        $hashed_pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        /* Create a new user ID + set hashed pass into field */
+        $stmt = $conn->prepare("INSERT INTO user(username, password, role) VALUES (:username,:password, :role)");
+        $stmt->bindParam(":username", $_POST['username']);
+        $stmt->bindParam(":password", $hashed_pass);
+        $stmt->bindParam(":role", $_POST['role']);
+        $stmt->execute();
+    }
+
+    if($_POST['role'] == '1') {
+        header('location: index.php?page=intern-create');
+    }
+    if($_POST['role'] == '2') {
+        header('location: index.php?page=company-create');
+    }
+    if($_POST['role'] == '3') {
+        header('location: index.php?page=education-create');
     }
 }
 ?>
@@ -48,7 +58,7 @@ if(isset($_POST['submit'])){
            <div class="signup">
                 <div class="col-12 join">
                 <h1>Join the Community</h1>
-                <form action="" method="post">
+                <form name="form" action="" method="post">
                   <div class="form-group">
                       <label for="input_username">Username</label>
                       <input value="<?php echo (isset($_POST['username']) ? $_POST['username'] : '' );?>" type="text" name="username" class="form-control" id="input_username" placeholder="Enter your username..">
@@ -61,7 +71,7 @@ if(isset($_POST['submit'])){
                   </div>
                   <div class="form-group">
                       <label for="input_role">Role</label>
-                      <input value="<?php echo (isset($_POST['role']) ? $_POST['role'] : '' );?>" type="text" name="role" class="form-control" id="input_role" placeholder="Enter the postal code..">
+                      <input value="<?php echo (isset($_POST['role']) ? $_POST['role'] : '' );?>" type="text" name="role" class="form-control" id="input_role" placeholder="Enter role ID..">
                       <?php echo (isset($error['role']) ? $error['role'] : '');?>
                   </div>
     

@@ -2,7 +2,7 @@
 require_once('db.php');
 
 if(isset($_GET['page']) && !empty($_GET['page'])){ // when page is empty then..
-    $pages = ['home', 'account', 'signup', 'internships', 'contact', 'account-create'];
+    $pages = ['home', 'account', 'signup', 'internships', 'contact', 'account-create', 'intern-create'];
     if(in_array($_GET['page'], $pages)){ // check if GET shows in array
         require_once($_GET['page'].'.php');
     } else { // if not, show 404 error page

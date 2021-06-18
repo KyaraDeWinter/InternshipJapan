@@ -10,16 +10,31 @@ if(isset($_POST['submit'])) {
     if(empty($_POST['password'])) {
         $error_password['password'] = '<span style="color: red;">Password is required.</span>';
     } else {
-    $username = strip_tags(trim($_POST['username']));
-    $password = strip_tags(trim($_POST['password']));
-    $query = $conn->prepare("SELECT * FROM user WHERE username = ? AND password = ?");
-    $query->execute(array($username, $password));
-    $control = $query->fetch(PDO::FETCH_OBJ);
-    if($control>0) {
-      $_SESSION['username']=$username;
-      header('location: index.php?page=account');
+
+    $stmt = $conn->prepare("SELECT password FROM user WHERE username LIKE :username"); // ophalen password van username
+    $stmt->bindParam(":username", $_POST['username']); // bind username aan post van username
+    $stmt->execute();
+
+    $dbhash = $stmt->fetchColumn(); // haalt password op
+
+    if(password_verify($_POST['password'], $dbhash)) {
+        echo 'equals';
+    } else {
+        echo 'false';
     }
-    echo "<center><h1>Username and/or password is incorrect!</h1></center>";
+        
+    // $username = strip_tags(trim($_POST['username']));
+    // password_verify($_POST['password']);
+    // // $password = strip_tags(trim($_POST['password']));
+    // $query = $conn->prepare("SELECT * FROM user WHERE username = ? AND password = ?");
+    // $query->execute(array($username, $hash));
+    // $control = $query->fetch(PDO::FETCH_OBJ);
+    // if($control>0) {
+    //   $_SESSION['username']=$username;
+    //   header('location: index.php?page=account');
+    // }
+    // echo "<center><p>Username and/or password is incorrect!</p></center>";
+    // echo $hash;
   }
 }
 ?>

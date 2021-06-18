@@ -1,5 +1,33 @@
 <?php
+session_start();
+require_once('db.php');
 require_once('template/header.php');
+
+if(isset($_POST['submit'])){
+  // if empty password or username then output...
+  if(empty($_POST['username'])){
+    $name_error = '<span style="Color: red;">Username is required.</span>';
+   }
+   if(empty($_POST['password'])){
+    $password_error = '<span style="Color: red;">Password is required.</span>';
+   }
+   // else check if userInput equals with the data from in the tabel users.
+   else {
+    $sql = "SELECT * FROM user WHERE username = ?";
+    $stmt = $conn->prepare($sql); 
+    $stmt->execute([$_POST['username']]);
+    $result = $stmt->fetchAll();
+    $hash = $result[0]['password'];
+    if (password_verify($_POST['password'], $hash)) {
+
+        $_SESSION['user_id'] = $result[0]['id'];
+        header('location: index.php?page=internship-admin');
+    } else {
+      $name_error = '<span style="Color: red;">Username and/or password is incorrect!</span>';
+      header('location: login.php');
+    }
+   }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -19,16 +47,26 @@ require_once('template/header.php');
                   <div class="col-12 login">
                       <h1>Login</h1>
                       <div class="login-form">
-                          <form>
+                          <form action="" method="post">
                               <div class="form-group">
-                                  <label for="input_email">Email address</label>
-                                  <input type="email" class="form-control" id="input_email" placeholder="Enter email">
+                                  <label for="username">Username</label>
+                                  <input type="text" class="form-control" name="username" placeholder="Enter username..">
+                                  <?php if(isset($error_name)){ ?>
+                                    <p><?php foreach($error_name as $value){
+                                    echo $value, '<br>';
+                                    } ?></p>
+                                <?php } ?>
                               </div>
                               <div class="form-group">
-                                  <label for="input_password">Password</label>
-                                  <input type="password" class="form-control" id="input_password" placeholder="Password">
+                                  <label for="password">Password</label>
+                                  <input type="password" class="form-control" name="password" placeholder="Enten password..">
+                                  <?php if(isset($error_password)){ ?>
+                                   <p><?php foreach($error_password as $value){
+                                    echo $value, '<br>';
+                                  } ?></p>
+                                <?php } ?>
                               </div>
-                              <button type="submit" class="btn btn-primary">Login</button>
+                              <input value="submit" name="submit" type="submit" class="btn btn-primary button">Login</input>
                           </form>
                       </div>
                   </div>
