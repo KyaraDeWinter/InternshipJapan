@@ -10,13 +10,13 @@ if(isset($_POST['submit'])){
     //     $error['username'] = 'Username is required.';
     // }
     if($_POST['username'] == '') {
-        $error['username'] = '<span style="color: red;">Username is required.</span>';
+        $error['username'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['password'] == '') {
-        $error['password'] = 'Password is required.';
+        $error['password'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['role'] == '') {
-        $error['role'] = 'Role is required.';
+        $error['role'] = '<span style="color: red;">This field is required.</span>';
     }
     //var_dump($error);
 
@@ -32,13 +32,13 @@ if(isset($_POST['submit'])){
     }
 
     if($_POST['role'] == '1') {
-        header('location: index.php?page=intern-create');
+        header('location: index.php?page=create-intern');
     }
     if($_POST['role'] == '2') {
-        header('location: index.php?page=company-create');
+        header('location: index.php?page=create-company');
     }
     if($_POST['role'] == '3') {
-        header('location: index.php?page=education-create');
+        header('location: index.php?page=create-education');
     }
 }
 ?>
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
                   </div>
                   <div class="form-group">
                       <label for="input_role">Role</label>
-                      <input value="<?php echo (isset($_POST['role']) ? $_POST['role'] : '' );?>" type="text" name="role" class="form-control" id="input_role" placeholder="Enter role ID..">
+                      <input value="<?php echo (isset($_POST['role']) ? $_POST['role'] : '' );?>" type="text" name="role" class="form-control" id="input_role" placeholder="1 for intern, 2 for company, 3 for educational partner">
                       <?php echo (isset($error['role']) ? $error['role'] : '');?>
                   </div>
     

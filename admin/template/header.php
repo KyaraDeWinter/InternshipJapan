@@ -37,24 +37,24 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.php?page=home">Home</a>
+              <a class="nav-link" href="../../../internship/home.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.php?page=internships">Internships</a>
+              <a class="nav-link" href="../../../internship/internships.php">Internships</a>
             </li>
             <li class="nav-item">
-             <a class="nav-link" href="index.php?page=contact">Contact</a>
+             <a class="nav-link" href="../../../internship/contact.php">Contact</a>
             </li>
             <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Account
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="index.php?page=account&id=">My account</a></li>
-            <li><a class="dropdown-item" href="index.php?page=signup">Signin</a></li>
+            <li><a class="dropdown-item" href="../../../internship/account.php">My account</a></li>
+            <li><a class="dropdown-item" href="../../../internship/signup.php">Signin</a></li>
             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="../internship/admin/login.php">Admin</a></li>
+            <li><a class="dropdown-item" href="../../../internship/admin/login.php">Admin</a></li>
           </ul>
         </li>
         </ul>

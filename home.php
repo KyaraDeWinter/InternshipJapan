@@ -41,27 +41,13 @@ require_once('template/header.php');
             <div class="col-12 col-md-10">
                 <div class="row">
                     <div class="col-12 col-md-6">
-    
-                    <?php
-                    $sql = "SELECT * FROM company";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->execute();
-                    $result = $stmt->fetchAll();
-                    // var_dump($result);
-                    ?>
-        
-                    <?php
-                    foreach($result as $res) { 
-                    // var_dump($res);
-                    ?>
-    
                         <div id="carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                 <img class="d-block w-100" src="images/gradient1.png" alt="First slide">
                                     <div class="carousel-caption">
-                                        <h5><?php echo $res['company_name'];?></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat exercitationem quo deserunt? Voluptatem ipsam, quis distinctio laudantium labore deleniti expedita.</p>
+                                        <h5>Company X</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt maxime enim libero vitae cupiditate consequuntur, sed obcaecati ratione pariatur quas deleniti distinctio, sequi molestias ipsum ad aut hic, facere qui eum fugiat et facilis reiciendis placeat possimus. Nulla, consequuntur iusto.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -81,15 +67,13 @@ require_once('template/header.php');
                             </a>
                             </div>
                         </div>
-    
-                        <?php } ?>
                     
                     <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">2 Lorem, ipsum dolor.</h5>
+                                <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                 <hr>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem eius impedit, quis omnis nemo blanditiis harum, nesciunt, distinctio repellat officiis nostrum explicabo nam fugit iste? Repellat consequuntur sapiente, sint, quos tenetur facere quam aut iure adipisci, deleniti est eos. Nobis nam error molestias? Quaerat facilis, voluptates neque minima consequatur velit!</p>
                                 <a href="#" class="btn btn-primary button">button</a>
                             </div>
                         </div>
@@ -100,9 +84,9 @@ require_once('template/header.php');
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">3 Lorem, ipsum dolor.</h5>
+                                <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                 <hr>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta facere officia pariatur velit non? Sit sunt ipsam cum quod. Vel, asperiores laboriosam. Suscipit numquam necessitatibus ratione laboriosam dolores excepturi dolorum harum dolore vero exercitationem? Ipsum illum blanditiis deleniti necessitatibus. Deserunt maiores commodi magnam minus id, consectetur corrupti magni porro nesciunt, atque aperiam laudantium sed itaque deleniti placeat ab dolore modi?</p>
                                 <a href="#" class="btn btn-primary button">button</a>
                             </div>
                         </div>
@@ -117,10 +101,10 @@ require_once('template/header.php');
                             <div class="profilepicture">
                                 <a href="account.php"><img src="images/defaultprofilepicture.png" alt="profilepicture"></a>
                             </div>
-                            <h5>Full Name</h5>
+                            <h5>Account name</h5>
                             <hr>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
-                            <a href="account.php" class="btn btn-primary button">View my Account</a>
+                            <p class="card-text">Description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, libero!</p>
+                            <a href="index.php?page=account" class="btn btn-primary button">View Account</a>
                         </div>
                     </div>
                 </div>

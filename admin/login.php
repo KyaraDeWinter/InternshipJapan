@@ -6,10 +6,10 @@ require_once('template/header.php');
 if(isset($_POST['submit'])){
   // if empty password or username then output...
   if(empty($_POST['username'])){
-    $name_error = '<span style="Color: red;">Username is required.</span>';
+    $name_error = '<span style="color: red;">This field is required.</span>';
    }
    if(empty($_POST['password'])){
-    $password_error = '<span style="Color: red;">Password is required.</span>';
+    $password_error = '<span style="color: red;">This field is required.</span>';
    }
    // else check if userInput equals with the data from in the tabel users.
    else {

@@ -5,10 +5,10 @@ require_once('db.php');
 
 if(isset($_POST['submit'])) {
     if(empty($_POST['username'])) {
-        $error_name['username'] = '<span style="color: red;">Username is required.</span>';
+        $error_name['username'] = '<span style="color: red;">This field is required.</span>';
     }
     if(empty($_POST['password'])) {
-        $error_password['password'] = '<span style="color: red;">Password is required.</span>';
+        $error_password['password'] = '<span style="color: red;">This field is required.</span>';
     } else {
 
     $stmt = $conn->prepare("SELECT password FROM user WHERE username LIKE :username"); // ophalen password van username
@@ -18,9 +18,9 @@ if(isset($_POST['submit'])) {
     $dbhash = $stmt->fetchColumn(); // haalt password op
 
     if(password_verify($_POST['password'], $dbhash)) {
-        echo 'equals';
+        echo 'Password is equal.';
     } else {
-        echo 'false';
+        echo 'Password is false.';
     }
         
     // $username = strip_tags(trim($_POST['username']));
@@ -82,7 +82,7 @@ if(isset($_POST['submit'])) {
                 <div class="col-12 col-sm-8 join">
                     <h1>Join the Community</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, qui! Ratione, possimus officia cumque, pariatur repellat minima voluptatum sequi vero a accusantium odit hic dicta fugit, natus voluptatem consequatur maiores.</p>
-                      <a href="index.php?page=account-create"><button type="button" class="btn btn-primary button">Create Your Account</button></a>
+                      <a href="index.php?page=create-account"><button type="button" class="btn btn-primary button">Create Your Account</button></a>
                 </div>
             </div>
            </div>

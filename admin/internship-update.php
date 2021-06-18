@@ -25,37 +25,37 @@ if(isset($_POST['submit'])){
     //     $error['company_name'] = 'Company name is required.';
     // }
     if($_POST['company_name'] == '') {
-        $error['company_name'] = 'Company name is required.';
+        $error['company_name'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['street_adress'] == '') {
-        $error['street_adress'] = 'Street adress is required.';
+        $error['street_adress'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['postal_code'] == '') {
-        $error['postal_code'] = 'Postal code is required.';
+        $error['postal_code'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['city'] == '') {
-        $error['city'] = 'City is required.';
+        $error['city'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['country_id'] == '') {
-        $error['country_id'] = 'Country ID is required.';
+        $error['country_id'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['profile_text'] == '') {
-        $error['profile_text'] = 'Profile text is required.';
+        $error['profile_text'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['position'] == '') {
-        $error['position'] = 'Position is required.';
+        $error['position'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['position_text'] == '') {
-        $error['position_text'] = 'Position text is required.';
+        $error['position_text'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['contact_name'] == '') {
-        $error['contact_name'] = 'Name of contact person is required.';
+        $error['contact_name'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['contact_email'] == '') {
-        $error['contact_email'] = 'Email of contact person is required.';
+        $error['contact_email'] = '<span style="color: red;">This field is required.</span>';
     }
     if($_POST['website'] == '') {
-        $error['website'] = 'Website is required.';
+        $error['website'] = '<span style="color: red;">This field is required.</span>';
     }
     //var_dump($error);
 
